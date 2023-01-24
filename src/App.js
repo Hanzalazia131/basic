@@ -19,9 +19,9 @@ function App() {
           <Routes>
             <Route path='/Info'exact element={<AddInfo/>}/>
             <Route path='/'exact element={<InfoList/>}/>
-            <Route path='/edit/:id'exact component={<EditInfo/>}/>
-            <Route path='/delete/:id'exact component={<DeleteInfo/>}/>
-            <Route path='/:id'exact component={<SingleInfo/>}/>
+            <Route path='/edit/:id' element={<EditInfo/>}/>
+            <Route path='/delete/:id'exact element={<DeleteInfo/>}/>
+            <Route path='/:id'exact element={<SingleInfo/>}/>
           </Routes>
         </Router> 
       </div>
