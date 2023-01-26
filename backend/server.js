@@ -12,18 +12,18 @@ const port = process.env.port || 5000;
 
 app.use(cors());
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.URI;
 
-// mongoose.set("strictQuery", false); 
-mongoose.connect("mongodb://0.0.0.0:27017/abc")
-.then(()=>{console.log("connected")})
-.catch(err => {console.log("Error:" + err)})
+mongoose.set("strictQuery", false); 
+mongoose.connect(uri);
+// .then(()=>{console.log("connected")})
+// .catch(err => {console.log("Error:" + err)})
 
-// const connection = mongoose.connection;
+const connection = mongoose.connection;
 
-// connection.once('open', () => {
-//     console.log("MongoDB database connection established successfully");
-// });
+connection.once('open', () => {
+    console.log("MongoDB database connection established successfully");
+});
 
 const InfoRouter = require('./routes/Infos');
 
