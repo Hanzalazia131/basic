@@ -68,7 +68,7 @@ export default class EditInfo extends React.Component {
     render() { 
         return (
             <div>
-            <h3>Create Info</h3>
+            <h3>Update Info</h3>
             <form onSubmit={this.onSubmit}>
             <div className="form-group"> 
                 <label>Name: </label>
@@ -97,7 +97,7 @@ export default class EditInfo extends React.Component {
                 </div>
               </div>
               <div className="form-group">
-                <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+                <input type="submit" value="Update Info" className="btn btn-primary" />
               </div>
             </form>
           </div>
